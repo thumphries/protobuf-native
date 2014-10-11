@@ -20,7 +20,8 @@ cabal-version:       >=1.10
 library
   exposed-modules:     Data.Protobuf
   other-extensions:    TemplateHaskell, MultiParamTypeClasses, FunctionalDependencies, UnicodeSyntax, KindSignatures, OverlappingInstances, FlexibleInstances, ScopedTypeVariables, FlexibleContexts, EmptyDataDecls
-  build-depends:       base >=4.6 && <4.8, bytestring >=0.10 && <0.11, text >= 1 && <= 2, template-haskell, cplusplus-th == 1.*
+  build-depends:       base >=4.6 && <4.8, bytestring >=0.10 && <0.11, text >= 1 && <= 2, template-haskell, cplusplus-th == 1.*, hprotoc-fork > 2.0.16, parsec >= 3.1.7, protocol-buffers-descriptor-fork >= 2.0.16, protocol-buffers-fork >= 2.0.16, containers >= 0.5.5.1
+  other-modules:       Data.Protobuf.ProtoFile
   hs-source-dirs:      src
   extra-libraries:     protobuf, c++
   c-sources:           cbits/hsprotobuf.cc

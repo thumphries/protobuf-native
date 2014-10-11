@@ -6,13 +6,16 @@ module Data.Protobuf (
   , writeProtobuf
   , Protobuf
   , ProtobufValue(..)
+  , protoFile
   , module Foreign.C
   , module Control.Applicative
-  
+
   , Std__basic_string
   , newPb
   , derefPb
   ) where
+
+import Data.Protobuf.ProtoFile (protoFile)
 
 import Data.Int
 import Data.Word
